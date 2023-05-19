@@ -1,0 +1,37 @@
+normal_seat=100
+normal_seat_price=200
+recliner_seat=50
+reclinr_seat_price=300
+total_seat=150
+
+while True:
+    normal_amount=0
+    recliner_amount=0
+    name=input("enter your name: ")
+    mobile_number=input("enter your mobile number: ")
+    seats=input("enter seats?(normal or recliner): ")
+    if seats=="normal":
+        seats=int(input("how many seats do you want?: "))
+        if seats<=normal_seat:
+            normal_amount+= seats*normal_seat_price
+            normal_seat-= seats
+            print(normal_amount)
+            print("seats left", normal_seat)
+        else:
+            print("seat not available")
+    elif seats=="recliner":
+        seats=int(input("how many seats do you want?: "))
+        if seats<= recliner_seat:
+            recliner_amount+= seats*reclinr_seat_price
+            recliner_seat-=seats
+            print(recliner_amount)
+            print("seats  left", recliner_seat)
+        else:
+            print("seats not available")
+                
+                
+    repeat=input(" add more seat?(yes/no) ")
+    if repeat=="no":
+        break
+    print(name)
+                
